@@ -6,18 +6,18 @@
 
    //form validation and Event listening for form submission
    form.addEventListener('submit', (e) => {
-       const format = /[!@#$%^&*()_+\-=\[\]{};':"\\|,.<>\/?]+/;
+       const char = /[!@#$%^&*()_+\-=\[\]{};':"\\|,.<>\/?]+/;
        e.preventDefault();
-       inputValue = input.value;
-       if(!inputValue || format.test(inputValue)=== true){
+       let inputValue = input.value
+       console.log(inputValue);
+       if(!inputValue || char.test(inputValue)=== true ){
            p2.textContent = "Please fill in a valid number";
-           p1.textContent = "";
            return false;
        }
        //call narcissistic function if form validation pulls through
        const narcNumberValidation = narcissistic(input.value);
        p2.textContent = narcNumberValidation;
-       p1.textContent = "";
+      
 
    });
 
@@ -43,8 +43,8 @@
       //console.log(num);
       //condition to validate narcissistic number
       if(num === arrSum){
-          return "Nice, Number is a Narcissistic Number!!";
+          return `Nice, ${number} is a Narcissistic Number!!`;
       }
-      return "Oops, Number is not a Narcissistic Number!!"
+      return `Oops, ${number} is not a Narcissistic Number!!`
        
    }
