@@ -1,3 +1,6 @@
+
+//    import narcissistic from './functions/narcissistic';
+   
    //Element selectors from DOM
    const input = document.querySelector('input');
    const form = document.querySelector('form');
@@ -22,7 +25,7 @@
    });
 
 
-   //narcissistic function
+  // narcissistic function
    const narcissistic = (number) => {
        //validate the input
       if(typeof(number) === 'undefined'){

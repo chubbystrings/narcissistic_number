@@ -1,6 +1,5 @@
-export default  () => {
 
-    const narcissistic = (number) => {
+ const narcissistic = (number) => {
         //validate the input
        if(typeof(number) === 'undefined'){
            return "Invalid input";
@@ -24,8 +23,7 @@ export default  () => {
        }
        return "Oops, Number is not a Narcissistic Number!!"
         
-    }
-
-}
+    };
 
 
+export default narcissistic;
